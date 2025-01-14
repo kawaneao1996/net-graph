@@ -64,6 +64,175 @@
         "outdoorIndoor": "アウトドア",
         "eatingHabits": "大食い"
       }
+    },
+    {
+      "id": 6,
+      "name": "中村",
+      "attributes": {
+        "games": ["FF14", "スプラトゥーン"],
+        "anime": ["SPY×FAMILY", "ブルーロック"],
+        "manga": ["呪術廻戦", "葬送のフリーレン"],
+        "foods": ["イタリアン", "カレー"],
+        "lifestyle": "不規則",
+        "outdoorIndoor": "バランス型",
+        "eatingHabits": "小食"
+      }
+    },
+    {
+      "id": 7,
+      "name": "小林",
+      "attributes": {
+        "games": ["原神", "マリオカート"],
+        "anime": ["推しの子", "ナルト"],
+        "manga": ["ワンピース", "ドラゴンボール"],
+        "foods": ["焼肉", "エスニック"],
+        "lifestyle": "朝型",
+        "outdoorIndoor": "アウトドア",
+        "eatingHabits": "普通"
+      }
+    },
+    {
+      "id": 8,
+      "name": "加藤",
+      "attributes": {
+        "games": ["ゼルダ", "モンハン"],
+        "anime": ["鬼滅の刃", "進撃の巨人"],
+        "manga": ["ブルーロック", "ハンターハンター"],
+        "foods": ["和食", "スイーツ"],
+        "lifestyle": "夜型",
+        "outdoorIndoor": "インドア",
+        "eatingHabits": "大食い"
+      }
+    },
+    {
+      "id": 9,
+      "name": "松本",
+      "attributes": {
+        "games": ["ゼルダ", "FF14", "スプラトゥーン"],
+        "anime": ["鬼滅の刃", "SPY×FAMILY"],
+        "manga": ["ワンピース", "チェンソーマン"],
+        "foods": ["和食", "ラーメン"],
+        "lifestyle": "朝型",
+        "outdoorIndoor": "アウトドア",
+        "eatingHabits": "普通"
+      }
+    },
+    {
+      "id": 10,
+      "name": "高橋",
+      "attributes": {
+        "games": ["原神", "ポケモン", "モンハン"],
+        "anime": ["推しの子", "チェンソーマン"],
+        "manga": ["呪術廻戦", "キングダム"],
+        "foods": ["中華", "エスニック"],
+        "lifestyle": "夜型",
+        "outdoorIndoor": "インドア",
+        "eatingHabits": "大食い"
+      }
+    },
+    {
+      "id": 11,
+      "name": "渡辺",
+      "attributes": {
+        "games": ["スプラトゥーン", "モンハン", "マリオカート"],
+        "anime": ["進撃の巨人", "ブルーロック"],
+        "manga": ["葬送のフリーレン", "ブルーロック"],
+        "foods": ["焼肉", "スイーツ", "カレー"],
+        "lifestyle": "不規則",
+        "outdoorIndoor": "バランス型",
+        "eatingHabits": "小食"
+      }
+    },
+    {
+      "id": 12,
+      "name": "山田",
+      "attributes": {
+        "games": ["マリオカート", "ゼルダ", "FF14"],
+        "anime": ["ワンピース", "ナルト"],
+        "manga": ["ドラゴンボール", "ハンターハンター"],
+        "foods": ["和食", "スイーツ"],
+        "lifestyle": "朝型",
+        "outdoorIndoor": "アウトドア",
+        "eatingHabits": "普通"
+      }
+    },
+    {
+      "id": 13,
+      "name": "中島",
+      "attributes": {
+        "games": ["ポケモン", "モンハン", "スプラトゥーン"],
+        "anime": ["進撃の巨人", "鬼滅の刃"],
+        "manga": ["キングダム", "チェンソーマン"],
+        "foods": ["中華", "ラーメン"],
+        "lifestyle": "夜型",
+        "outdoorIndoor": "インドア",
+        "eatingHabits": "大食い"
+      }
+    },
+    {
+      "id": 12,
+      "name": "佐藤",
+      "attributes": {
+        "games": ["マインクラフト", "フォートナイト"],
+        "anime": ["進撃の巨人", "ワンパンマン"],
+        "manga": ["ハンターハンター", "ナルト"],
+        "foods": ["イタリアン", "カレー"],
+        "lifestyle": "不規則",
+        "outdoorIndoor": "バランス型",
+        "eatingHabits": "普通"
+      }
+    },
+    {
+      "id": 13,
+      "name": "鈴木",
+      "attributes": {
+        "games": ["ドラクエ", "ペルソナ5", "モンハン"],
+        "anime": ["ソードアート・オンライン", "リゼロ"],
+        "manga": ["進撃の巨人", "東京喰種"],
+        "foods": ["焼肉", "スイーツ"],
+        "lifestyle": "朝型",
+        "outdoorIndoor": "インドア",
+        "eatingHabits": "小食"
+      }
+    },
+    {
+      "id": 14,
+      "name": "田中",
+      "attributes": {
+        "games": ["ポケモン", "どうぶつの森"],
+        "anime": ["名探偵コナン", "ドラゴンボール"],
+        "manga": ["銀魂", "ブリーチ"],
+        "foods": ["和食", "ラーメン"],
+        "lifestyle": "夜型",
+        "outdoorIndoor": "アウトドア",
+        "eatingHabits": "大食い"
+      }
+    },
+    {
+      "id": 15,
+      "name": "山田",
+      "attributes": {
+        "games": ["ファイナルファンタジー", "キングダムハーツ"],
+        "anime": ["デスノート", "鋼の錬金術師"],
+        "manga": ["ブラッククローバー", "七つの大罪"],
+        "foods": ["中華", "エスニック"],
+        "lifestyle": "不規則",
+        "outdoorIndoor": "バランス型",
+        "eatingHabits": "普通"
+      }
+    },
+    {
+      "id": 16,
+      "name": "井上",
+      "attributes": {
+        "games": ["ゼルダ", "スマブラ"],
+        "anime": ["ワンピース", "ナルト"],
+        "manga": ["フェアリーテイル", "進撃の巨人"],
+        "foods": ["イタリアン", "焼肉"],
+        "lifestyle": "朝型",
+        "outdoorIndoor": "インドア",
+        "eatingHabits": "小食"
+      }
     }
   ]
 }

@@ -114,6 +114,7 @@ const HobbyNetwork: React.FC = () => {
   const [rotation, setRotation] = useState<number>(0);
   const [hoveredLink, setHoveredLink] = useState<Link | null>(null);
   const [selectedNode, setSelectedNode] = useState<Node | null>(null);
+  const [isAnimating, setIsAnimating] = useState<boolean>(true);
   const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(
     null
   );
@@ -665,18 +666,29 @@ const HobbyNetwork: React.FC = () => {
   // アニメーションの更新
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateAnimation = () => {
-    setRotation((prev) => (prev + 0.002) % (Math.PI * 2));
-    animationRef.current = requestAnimationFrame(updateAnimation);
+    if (isAnimating) {
+      setRotation((prev) => (prev + 0.002) % (Math.PI * 2));
+      animationRef.current = requestAnimationFrame(updateAnimation);
+    }
   };
 
   useEffect(() => {
-    animationRef.current = requestAnimationFrame(updateAnimation);
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [updateAnimation]);
+    if (isAnimating) {
+      animationRef.current = requestAnimationFrame(updateAnimation);
+      return () => {
+        if (animationRef.current) {
+          cancelAnimationFrame(animationRef.current);
+        }
+      };
+    }
+  }, [updateAnimation, isAnimating]);
+
+  const toggleAnimation = () => {
+    setIsAnimating(!isAnimating);
+    if (!isAnimating && !animationRef.current) {
+      animationRef.current = requestAnimationFrame(updateAnimation);
+    }
+  };
 
   useEffect(() => {
     drawGraph();
@@ -695,7 +707,8 @@ const HobbyNetwork: React.FC = () => {
         <h2 className="hobby-network-title">3D趣味・属性ネットワーク図</h2>
       </div>
       <div className="hobby-network-content">
-        <div className="category-select-container">
+        <div className="control-container">
+          <div className="category-select-container">
           <select
             className="category-select"
             value={selectedCategory}
@@ -707,6 +720,13 @@ const HobbyNetwork: React.FC = () => {
               </option>
             ))}
           </select>
+          </div>
+          <button 
+            className="animation-toggle-button"
+            onClick={toggleAnimation}
+          >
+            {isAnimating ? '回転を停止' : '回転を再開'}
+          </button>
         </div>
         <div className="canvas-container">
           <canvas
