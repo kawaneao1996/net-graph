@@ -1,0 +1,62 @@
+.hobby-network-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.hobby-network-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hobby-network-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.hobby-network-content {
+  padding: 1.5rem;
+}
+
+.category-select-container {
+  margin-bottom: 1rem;
+  position: relative;
+  width: 180px;
+}
+
+.category-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+  appearance: none;
+}
+
+.category-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.canvas-container {
+  width: 100%;
+  height: 24rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: #111827;
+  overflow: hidden;
+}
+
+.network-canvas {
+  width: 100%;
+  height: 100%;
+}
