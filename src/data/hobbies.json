@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "name": "田中",
+      "attributes": {
+        "games": ["ゼルダ", "FF14"],
+        "anime": ["鬼滅の刃", "SPY×FAMILY"],
+        "manga": ["ワンピース", "チェンソーマン"],
+        "foods": ["和食", "イタリアン", "ラーメン"],
+        "lifestyle": "朝型",
+        "outdoorIndoor": "アウトドア",
+        "eatingHabits": "普通"
+      }
+    },
+    {
+      "id": 2,
+      "name": "佐藤",
+      "attributes": {
+        "games": ["原神", "ポケモン"],
+        "anime": ["推しの子", "チェンソーマン"],
+        "manga": ["呪術廻戦", "キングダム"],
+        "foods": ["中華", "エスニック"],
+        "lifestyle": "夜型",
+        "outdoorIndoor": "インドア",
+        "eatingHabits": "大食い"
+      }
+    },
+    {
+      "id": 3,
+      "name": "鈴木",
+      "attributes": {
+        "games": ["スプラトゥーン", "モンハン"],
+        "anime": ["進撃の巨人", "ブルーロック"],
+        "manga": ["葬送のフリーレン", "ブルーロック"],
+        "foods": ["焼肉", "スイーツ", "カレー"],
+        "lifestyle": "不規則",
+        "outdoorIndoor": "バランス型",
+        "eatingHabits": "小食"
+      }
+    },
+    {
+      "id": 4,
+      "name": "山田",
+      "attributes": {
+        "games": ["FF14", "原神"],
+        "anime": ["SPY×FAMILY", "推しの子"],
+        "manga": ["チェンソーマン", "キングダム"],
+        "foods": ["和食", "ラーメン"],
+        "lifestyle": "朝型",
+        "outdoorIndoor": "インドア",
+        "eatingHabits": "普通"
+      }
+    },
+    {
+      "id": 5,
+      "name": "伊藤",
+      "attributes": {
+        "games": ["ゼルダ", "モンハン"],
+        "anime": ["鬼滅の刃", "進撃の巨人"],
+        "manga": ["ワンピース", "呪術廻戦"],
+        "foods": ["イタリアン", "エスニック", "カレー"],
+        "lifestyle": "夜型",
+        "outdoorIndoor": "アウトドア",
+        "eatingHabits": "大食い"
+      }
+    }
+  ]
+}
