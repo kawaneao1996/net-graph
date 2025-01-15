@@ -23,6 +23,43 @@
   padding: 1.5rem;
 }
 
+.legend-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.legend-title {
+  font-size: 0.875rem;
+  color: #374151;
+  margin-top: 0.5rem;
+}
+
+.legend-gradient {
+  width: 200px;
+}
+
+.legend-gradient-bar {
+  height: 20px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 255),
+    rgb(0, 255, 0),
+    rgb(255, 255, 0),
+    rgb(255, 0, 0)
+  );
+  margin-bottom: 0.25rem;
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
 .control-container {
   display: flex;
   gap: 1rem;

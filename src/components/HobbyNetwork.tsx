@@ -48,12 +48,21 @@ interface Link {
 type Category = keyof Attributes | "all";
 
 // hobbies.jsonからデータを読み込む
-import hobbiesData from '../data/hobbies.json';
+import hobbiesData from "../data/hobbies.json";
 
 // データを型安全に変換
 const validateFood = (food: string): Food => {
-  const validFoods = ["和食", "中華", "イタリアン", "エスニック", "焼肉", "スイーツ", "ラーメン", "カレー"] as const;
-  if (!validFoods.includes(food as typeof validFoods[number])) {
+  const validFoods = [
+    "和食",
+    "中華",
+    "イタリアン",
+    "エスニック",
+    "焼肉",
+    "スイーツ",
+    "ラーメン",
+    "カレー",
+  ] as const;
+  if (!validFoods.includes(food as (typeof validFoods)[number])) {
     throw new Error(`Invalid food: ${food}`);
   }
   return food as Food;
@@ -61,7 +70,9 @@ const validateFood = (food: string): Food => {
 
 const validateLifestyle = (lifestyle: string): Lifestyle => {
   const validLifestyles = ["朝型", "夜型", "不規則"] as const;
-  if (!validLifestyles.includes(lifestyle as typeof validLifestyles[number])) {
+  if (
+    !validLifestyles.includes(lifestyle as (typeof validLifestyles)[number])
+  ) {
     throw new Error(`Invalid lifestyle: ${lifestyle}`);
   }
   return lifestyle as Lifestyle;
@@ -69,7 +80,7 @@ const validateLifestyle = (lifestyle: string): Lifestyle => {
 
 const validateOutdoorIndoor = (value: string): OutdoorIndoor => {
   const validValues = ["アウトドア", "インドア", "バランス型"] as const;
-  if (!validValues.includes(value as typeof validValues[number])) {
+  if (!validValues.includes(value as (typeof validValues)[number])) {
     throw new Error(`Invalid outdoorIndoor: ${value}`);
   }
   return value as OutdoorIndoor;
@@ -77,7 +88,7 @@ const validateOutdoorIndoor = (value: string): OutdoorIndoor => {
 
 const validateEatingHabit = (habit: string): EatingHabit => {
   const validHabits = ["小食", "普通", "大食い"] as const;
-  if (!validHabits.includes(habit as typeof validHabits[number])) {
+  if (!validHabits.includes(habit as (typeof validHabits)[number])) {
     throw new Error(`Invalid eatingHabit: ${habit}`);
   }
   return habit as EatingHabit;
@@ -96,15 +107,15 @@ const categories: Record<Category, string> = {
 };
 
 // ノードデータをhobbies.jsonから読み込み、型を変換
-const nodeData: Node[] = hobbiesData.nodes.map(node => ({
+const nodeData: Node[] = hobbiesData.nodes.map((node) => ({
   ...node,
   attributes: {
     ...node.attributes,
     foods: node.attributes.foods.map(validateFood),
     lifestyle: validateLifestyle(node.attributes.lifestyle),
     outdoorIndoor: validateOutdoorIndoor(node.attributes.outdoorIndoor),
-    eatingHabits: validateEatingHabit(node.attributes.eatingHabits)
-  }
+    eatingHabits: validateEatingHabit(node.attributes.eatingHabits),
+  },
 }));
 
 const HobbyNetwork: React.FC = () => {
@@ -556,7 +567,7 @@ const HobbyNetwork: React.FC = () => {
       ctx.fill();
 
       if (isSelected || isConnected) {
-        ctx.lineWidth = 5;  // 輪郭を太く
+        ctx.lineWidth = 5; // 輪郭を太く
         ctx.strokeStyle = `rgba(147, 51, 234, ${opacity})`; // 紫色
       } else {
         ctx.lineWidth = 1;
@@ -709,23 +720,20 @@ const HobbyNetwork: React.FC = () => {
       <div className="hobby-network-content">
         <div className="control-container">
           <div className="category-select-container">
-          <select
-            className="category-select"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value as Category)}
-          >
-            {Object.entries(categories).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
+            <select
+              className="category-select"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value as Category)}
+            >
+              {Object.entries(categories).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
           </div>
-          <button 
-            className="animation-toggle-button"
-            onClick={toggleAnimation}
-          >
-            {isAnimating ? '回転を停止' : '回転を再開'}
+          <button className="animation-toggle-button" onClick={toggleAnimation}>
+            {isAnimating ? "回転を停止" : "回転を再開"}
           </button>
         </div>
         <div className="canvas-container">
@@ -741,6 +749,16 @@ const HobbyNetwork: React.FC = () => {
               setMousePos(null);
             }}
           />
+        </div>
+        <div className="legend-container">
+          <div className="legend-title">関連度の強さ</div>
+          <div className="legend-gradient">
+            <div className="legend-gradient-bar" />
+            <div className="legend-labels">
+              <span>弱</span>
+              <span>強</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
